@@ -17,7 +17,7 @@ const db=await mongoose.connect(MONGODB_URI).then(()=>{
 
 
 const app=express()
-app.use(cors())
+app.use(cors({ origin: "https://under-radar.vercel.app" }));
 app.use(bodyParser.json())
 app.use(express.json())
 
