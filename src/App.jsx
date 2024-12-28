@@ -32,7 +32,7 @@ function App(){
   
     console.log("Submitting data:", data);
   
-    const response = await fetch("http://localhost:3000/", {
+    const response = await fetch("https://underradar-backend.onrender.com/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -73,7 +73,7 @@ function App(){
     }
   }
   useEffect(() => {
-     fetch("http://localhost:3000/")
+     fetch("https://underradar-backend.onrender.com/")
   .then(async (res) => {
     let a = await res.json();
     console.log(a);
