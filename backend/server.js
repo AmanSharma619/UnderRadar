@@ -9,6 +9,11 @@ import { YourModel } from "./schema.js"
 const PORT= process.env.PORT || 3000;
 const MONGODB_URI=process.env.MONGODB_URI || "mongodb+srv://amansharmaas536:amansharma@cluster1.k6vos.mongodb.net/UnderRadar?retryWrites=true&w=majority&appName=Cluster1";
 
+const app=express()
+app.use(cors({ origin: "https://under-radar.vercel.app" }));
+app.use(bodyParser.json())
+app.use(express.json())
+
 const db=await mongoose.connect(MONGODB_URI).then(()=>{
     console.log("done")
 }).catch((err)=>{
@@ -16,10 +21,7 @@ const db=await mongoose.connect(MONGODB_URI).then(()=>{
 })
 
 
-const app=express()
-app.use(cors({ origin: "https://under-radar.vercel.app" }));
-app.use(bodyParser.json())
-app.use(express.json())
+
 
 
 app.get("/", async (req,res)=>{
