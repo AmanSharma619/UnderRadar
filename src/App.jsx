@@ -432,9 +432,7 @@ function updateInfoWindow(content, center) {
       <input type="color" name="" id="color" {...register("Color")} />
       <input type="text" {...register("lat")} className="hidden" id="lat" value={ltlng.current.lat || ""} />
       <input type="text" {...register("lng")} className="hidden" id="lng" value={ltlng.current.lng || ""} />
-      <button className="button cursor-pointer" id="submit" onClick={()=>{
-        window.location.reload()
-      }} >Confirm Marker</button>
+      <button className="button cursor-pointer" id="submit" >Confirm Marker</button>
         </form>
     </div>
     <div className="confirm w-full flex justify-center h-14 items-center">
