@@ -802,9 +802,12 @@ gmp-place-autocomplete {
     padding: 1px;
   }
   #submit{
-    position: relative;
-    right: 10%;
-    bottom: -15%;
+    cursor: pointer;
+  padding: 5px;
+  border: 1px solid black;
+  width: 50%;
+  position: relative;
+  bottom:-12%;
   }
   .about{
     height: 75vh;
