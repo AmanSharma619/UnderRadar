@@ -11,12 +11,11 @@ function App(){
   const removemark=useRef()
   let isclicked=false
 
-
   const {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors ,isSubmitting},
   } = useForm()
 
   async function submit_data(data) {
@@ -32,7 +31,7 @@ function App(){
   
     console.log("Submitting data:", data);
   
-    const response = await fetch("https://underradar-backend.onrender.com/", {
+    const response = await fetch("http://localhost:3000/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -41,8 +40,17 @@ function App(){
     })
     
   
+
   }
-  
+
+  const delay=()=>{
+    return new Promise((res,rej)=>{
+      setTimeout(() => {
+        res()
+      },3000 );
+    })
+  }
+
 
   function show_form(){
     if(isclicked==true){
@@ -73,7 +81,7 @@ function App(){
     }
   }
   useEffect(() => {
-     fetch("https://underradar-backend.onrender.com/")
+     fetch("http://localhost:3000/")
   .then(async (res) => {
     let a = await res.json();
     console.log(a);
@@ -432,8 +440,14 @@ function updateInfoWindow(content, center) {
       <input type="color" name="" id="color" {...register("Color")} />
       <input type="text" {...register("lat")} className="hidden" id="lat" value={ltlng.current.lat || ""} />
       <input type="text" {...register("lng")} className="hidden" id="lng" value={ltlng.current.lng || ""} />
-      <button className="button cursor-pointer" id="submit" >Confirm Marker</button>
+      <input type="submit" disabled={isSubmitting} id="submit" onClick={ async ()=>{
+        await delay()
+        window.location.reload()
+      }} />
+      {isSubmitting && <p>Submittng......</p>}
         </form>
+      
+      
     </div>
     <div className="confirm w-full flex justify-center h-14 items-center">
       <button ref={placemark} id="placebutt" className="bg-gray-700 w-1/5 rounded-md h-9 m-auto text-gray-400 button" onClick={show_form}>Place Marker?</button>
