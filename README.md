@@ -15,4 +15,4 @@ UnderRadar is a web application that highlights underrated spots in a city for p
 - **Database:** MongoDB 
 - **API:** Google Maps API
 
-  Note: If you're using the link after 7th Jan 2025, you wont be able to see the map(free tier expiration)
+ 
