@@ -745,6 +745,9 @@ gmp-place-autocomplete {
   --border-width: 2px;
  }
  @media (max-width: 450px){
+  .main{
+   animation: none;
+  }
   .nav
   {
     justify-content: space-around;
