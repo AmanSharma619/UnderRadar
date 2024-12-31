@@ -1,8 +1,17 @@
-# React + Vite
+# UnderRadar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://under-radar.vercel.app/
 
-Currently, two official plugins are available:
+UnderRadar is a web application that highlights underrated spots in a city for people to explore. Users can view these spots on a map and discover hidden gems for hanging out, relaxing, or sightseeing. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Interactive Map:** Displays underrated spots using the Google Maps API.
+- **Custom Locations:** Stores unique place IDs in a database for quick access.
+- **Real-time Data:** Shows data dynamically when the map loads or renders.
+
+## Tech Stack
+- **Frontend:** HTML, CSS, JavaScript, React.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB 
+- **API:** Google Maps API
+
