@@ -748,6 +748,9 @@ gmp-place-autocomplete {
   .main{
    animation: none;
   }
+  #map{
+   animation:none;
+  }
   .nav
   {
     justify-content: space-around;
