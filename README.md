@@ -10,7 +10,7 @@ UnderRadar is a web application that highlights underrated spots in a city for p
 - **Real-time Data:** Shows data dynamically when the map loads or renders.
 
 ## Tech Stack
-- **Frontend:** HTML, CSS, JavaScript, React.js
+- **Frontend:** HTML, CSS, JavaScript, React.js,TailwindCSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB 
 - **API:** Google Maps API
