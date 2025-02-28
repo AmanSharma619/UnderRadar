@@ -10,7 +10,7 @@ const PORT= process.env.PORT || 3000;
 const MONGODB_URI=process.env.MONGODB_URI ;
 
 const app=express()
-app.use(cors({ origin: "https://under-radar.vercel.app" }));
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json())
 app.use(express.json())
 
